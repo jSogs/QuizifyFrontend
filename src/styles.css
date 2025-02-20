@@ -1,0 +1,339 @@
+/* Spotify Theme Colors */
+:root {
+  --spotify-black: #000000;
+  --spotify-green: #1DB954;
+  --spotify-white: #FFFFFF;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--spotify-black);
+  color: var(--spotify-white);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Spotify Styled Buttons */
+.spotify-button {
+  background-color: var(--spotify-green);
+  color: var(--spotify-white);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.spotify-button:hover {
+  background-color: #18a34b;
+  transform: scale(1.05);
+}
+
+/* Room Container */
+.room-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Input Field */
+.room-input {
+  width: 60%;
+  max-width: 300px;
+  padding: 12px;
+  border: 2px solid var(--spotify-green);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--spotify-white);
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Questions and Selected Answers Layout */
+.questions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+/* Question Section (Align Left) */
+.question-section {
+  flex: 1;
+  max-width: 400px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+/* Question Title */
+.question-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Answer Buttons Grid (Columns of 5) */
+.answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Individual Answer Button */
+.answer-button {
+  background: var(--spotify-green);
+  color: var(--spotify-white);
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* When Selected */
+.answer-button.selected {
+  background: #2df46c;
+  color: var(--spotify-black);
+  font-weight: bold;
+}
+
+/* When Disabled (Grayed Out) */
+.answer-button.disabled {
+  background: #444;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Hover Effect */
+.answer-button:hover:not(.disabled) {
+  background: #18a34b;
+  transform: scale(1.05);
+}
+
+/* Selected Answers Section (Align Right) */
+.selected-answers {
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+/* Selected Answers Title */
+.selected-answers h4 {
+  color: var(--spotify-green);
+  font-size: 20px;
+}
+
+/* Selected Answers List */
+.selected-answers ol {
+  padding: 0;
+}
+
+.selected-answers li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+/* Submit Button */
+.submit-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: var(--spotify-green);
+  color: var(--spotify-white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background: #18a34b;
+  transform: scale(1.05);
+}
+
+/* Game Results Container */
+.result-container {
+  text-align: center;
+  background: rgba(30, 215, 96, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Category Section */
+.category-section {
+  margin-bottom: 20px;
+}
+
+/* Results List */
+.results-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Answer Colors */
+.correct {
+  background-color: #1ed760; /* ✅ Green */
+  color: black;
+}
+
+.almost {
+  background-color: #a8e6cf; /* 🟢 Light Green */
+  color: black;
+}
+
+.wrong {
+  background-color: #ff4c4c; /* ❌ Red */
+  color: white;
+}
+
+/* Individual List Item */
+.results-list li {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  min-width: 120px;
+}
+
+/* Score & Winner Display */
+.result-score {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+}
+
+.spinner {
+width: 40px;
+height: 40px;
+border: 5px solid rgba(255, 255, 255, 0.3);
+border-top: 5px solid var(--spotify-green);
+border-radius: 50%;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+margin-top: 10px;
+font-size: 16px;
+font-weight: bold;
+color: var(--spotify-green);
+}
+
+/* Dropdown Label */
+.term-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--spotify-white);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Dropdown Select Box */
+.term-select {
+  background-color: var(--spotify-black);
+  color: var(--spotify-white);
+  border: 2px solid var(--spotify-green);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Focus Effects */
+.term-select:hover,
+.term-select:focus {
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  outline: none;
+}
+
+/* Dropdown Options */
+.term-select option {
+  background-color: var(--spotify-black);
+  color: var(--spotify-white);
+  font-weight: bold;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--spotify-black);
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Quizify Icon */
+.quizify-icon {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Quizify Title */
+.quizify-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--spotify-white);
+}
+
+
