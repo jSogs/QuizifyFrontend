@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import "./styles.css"
 import { v4 as uuidv4 } from "uuid"; // To generate unique room IDs
 
-const socket = io("http://192.168.1.93:4000");
+const socket = io("http://quizifybackend.onrender.com");
 
 const MusicQuiz = () => {
   const [accessToken, setAccessToken] = useState(null);
@@ -32,7 +32,7 @@ const MusicQuiz = () => {
   }, []);
 
   const handleLogin = () => {
-    window.location.href = "http://192.168.1.93:4000/login";
+    window.location.href = "http://quizifybackend.onrender.com/login";
   };
 
   // 🔹 Create Room: Generate a unique room ID and join it
